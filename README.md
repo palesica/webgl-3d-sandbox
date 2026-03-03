@@ -1,44 +1,84 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sandbox 3D Experiments 🧪
 
-## Available Scripts
+Набор моих графических экспериментов на `WebGL` и `React`.
+Идея проекта - попробовать повторить ключевые подходы из `Three.js`, но в своем мини-движке: с собственными сущностями, камерой, материалами, рендерерами и сценой.
 
-In the project directory, you can run:
+## Что это за проект
 
-### `yarn start`
+- 🎯 Личная песочница для экспериментов с 2D/3D графикой
+- 🧠 Практика архитектуры рендер-движка "с нуля"
+- 🧩 Изучение математики и пайплайна рендера через реальный код
+- 🛠 UI и демо-сцены на `React`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Демо-сцены / эксперименты
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+В проекте есть несколько отдельных визуальных сцен:
 
-### `yarn test`
+- `snow-2d`
+- `snow-3d`
+- `bezier-particles`
+- `perlin-flow-field`
+- `terrain`
+- `cube-wave`
+- `water-2d`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Маршруты описаны в `src/common/Routes.tsx`.
 
-### `yarn build`
+## Технические хайлайты ⚙️
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Собственный engine-слой** в `src/engine`
+  - `core`: математика, буферы, shader-система, утилиты
+  - `package`: сцена, камера, материалы, геометрии, рендереры, события
+- **Декораторы и метаданные** (`reflect-metadata`) для части внутренней архитектуры
+- **Кастомные GLSL-шейдеры** (`.vert`, `.frag`, `.glsl`)
+- **Разделение на reusable-модули** (геометрия / материалы / рендереры / сцена)
+- **CRACO + Babel-конфигурация** для старого CRA-стека и экспериментальных возможностей
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Быстрый старт 🚀
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> Проект исторический, поэтому для стабильного запуска нужен `Node 14`.
 
-### `yarn eject`
+### 1) Подготовка окружения
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+nvm use 14
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Если версии нет:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+nvm install 14
+nvm use 14
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 2) Установка зависимостей
 
-## Learn More
+```bash
+yarn install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3) Запуск в development
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+yarn start
+```
+
+Приложение откроется на `http://localhost:3000`.
+
+## Полезные команды
+
+- `yarn start` - запуск dev-сервера
+- `yarn test` - тесты в watch-режиме
+- `yarn build` - production-сборка
+
+## Структура проекта
+
+- `src/engine` - ядро и модули мини-движка
+- `src/components` - демо-сцены/эксперименты
+- `src/common` - общая инфраструктура приложения
+- `src/layout` - визуальная обвязка интерфейса
+
+## Зачем это все
+
+Этот проект - про обучение через практику:
+не просто "использовать готовый 3D-фреймворк", а понять как он устроен изнутри и собрать похожую архитектуру руками. 💙
