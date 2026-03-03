@@ -5,6 +5,6 @@ import React from 'react';
  */
 export function PerlinFlowFieldComponent() {
   return (
-    <div>Perlin hui</div>
+    <div>Perlini</div>
   );
 }

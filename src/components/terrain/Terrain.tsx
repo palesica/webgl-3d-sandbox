@@ -5,6 +5,6 @@ import React from 'react';
  */
 export function TerrainComponent() {
   return (
-    <div>Terrain hui</div>
+    <div>Terrain</div>
   );
 }

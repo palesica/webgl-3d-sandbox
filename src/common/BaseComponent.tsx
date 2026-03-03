@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { Application, OrbitControls, PerspectiveCamera } from '@engine';
+import { Application } from '@engine/application';
+import { OrbitControls } from '@engine/controls';
+import { PerspectiveCamera } from '@engine/camera';
 
 import { ControlPanel } from 'common';
 

@@ -5,6 +5,6 @@ import React from 'react';
  */
 export function CubeWaveComponent() {
   return (
-    <div>Cube wave hui</div>
+    <div>Cube wave</div>
   );
 }

@@ -5,6 +5,6 @@ import React from 'react';
  */
 export function BezierParticlesComponent() {
   return (
-    <div>Bezier hui</div>
+    <div>Bezier</div>
   );
 }

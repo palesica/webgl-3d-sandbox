@@ -1,4 +1,6 @@
-import { BoxGeometry, Entity, Scene, StandardMaterial } from '@engine';
+import { Scene } from '@engine/scene';
+import { BoxGeometry, Entity } from '@engine/geometries';
+import { StandardMaterial } from '@engine/materials';
 import { Color } from '@engine/core';
 
 import { BaseComponent } from 'common';

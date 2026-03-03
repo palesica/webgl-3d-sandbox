@@ -5,6 +5,6 @@ import React from 'react';
  */
 export function Water2DComponent() {
   return (
-    <div>Water 2D hui</div>
+    <div>Water 2D</div>
   );
 }
