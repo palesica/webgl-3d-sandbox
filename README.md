@@ -1,18 +1,18 @@
 # Sandbox 3D Experiments 🧪
 
-Набор моих графических экспериментов на `WebGL` и `React`.
-Идея проекта - попробовать повторить ключевые подходы из `Three.js`, но в своем мини-движке: с собственными сущностями, камерой, материалами, рендерерами и сценой.
+A collection of my graphics experiments built with `WebGL` and `React`.
+The main idea is to recreate core `Three.js` concepts in a custom mini-engine: with its own entities, camera system, materials, renderers, and scene management.
 
-## Что это за проект
+## What This Project Is
 
-- 🎯 Личная песочница для экспериментов с 2D/3D графикой
-- 🧠 Практика архитектуры рендер-движка "с нуля"
-- 🧩 Изучение математики и пайплайна рендера через реальный код
-- 🛠 UI и демо-сцены на `React`
+- 🎯 A personal sandbox for 2D/3D graphics experiments
+- 🧠 Practice building rendering engine architecture from scratch
+- 🧩 Learning rendering math and pipeline details through real code
+- 🛠 UI and demo scenes built with `React`
 
-## Демо-сцены / эксперименты
+## Demo Scenes / Experiments
 
-В проекте есть несколько отдельных визуальных сцен:
+This project includes several standalone visual demos:
 
 - `snow-2d`
 - `snow-3d`
@@ -22,63 +22,63 @@
 - `cube-wave`
 - `water-2d`
 
-Маршруты описаны в `src/common/Routes.tsx`.
+Routes are defined in `src/common/Routes.tsx`.
 
-## Технические хайлайты ⚙️
+## Technical Highlights ⚙️
 
-- **Собственный engine-слой** в `src/engine`
-  - `core`: математика, буферы, shader-система, утилиты
-  - `package`: сцена, камера, материалы, геометрии, рендереры, события
-- **Декораторы и метаданные** (`reflect-metadata`) для части внутренней архитектуры
-- **Кастомные GLSL-шейдеры** (`.vert`, `.frag`, `.glsl`)
-- **Разделение на reusable-модули** (геометрия / материалы / рендереры / сцена)
-- **CRACO + Babel-конфигурация** для старого CRA-стека и экспериментальных возможностей
+- **Custom engine layer** in `src/engine`
+  - `core`: math, buffers, shader system, utilities
+  - `package`: scene, camera, materials, geometries, renderers, events
+- **Decorators and metadata** (`reflect-metadata`) for parts of the internal architecture
+- **Custom GLSL shaders** (`.vert`, `.frag`, `.glsl`)
+- **Modular reusable architecture** (geometry / materials / renderers / scene)
+- **CRACO + Babel setup** for an older CRA stack and experimental features
 
-## Быстрый старт 🚀
+## Quick Start 🚀
 
-> Проект исторический, поэтому для стабильного запуска нужен `Node 14`.
+> This is a legacy project, so `Node 14` is required for a stable setup.
 
-### 1) Подготовка окружения
+### 1) Prepare the environment
 
 ```bash
 nvm use 14
 ```
 
-Если версии нет:
+If Node 14 is not installed:
 
 ```bash
 nvm install 14
 nvm use 14
 ```
 
-### 2) Установка зависимостей
+### 2) Install dependencies
 
 ```bash
 yarn install
 ```
 
-### 3) Запуск в development
+### 3) Run in development mode
 
 ```bash
 yarn start
 ```
 
-Приложение откроется на `http://localhost:3000`.
+The app will be available at `http://localhost:3000`.
 
-## Полезные команды
+## Useful Commands
 
-- `yarn start` - запуск dev-сервера
-- `yarn test` - тесты в watch-режиме
-- `yarn build` - production-сборка
+- `yarn start` - start the dev server
+- `yarn test` - run tests in watch mode
+- `yarn build` - create a production build
 
-## Структура проекта
+## Project Structure
 
-- `src/engine` - ядро и модули мини-движка
-- `src/components` - демо-сцены/эксперименты
-- `src/common` - общая инфраструктура приложения
-- `src/layout` - визуальная обвязка интерфейса
+- `src/engine` - core and modules of the mini-engine
+- `src/components` - demo scenes/experiments
+- `src/common` - shared application infrastructure
+- `src/layout` - UI layout components
 
-## Зачем это все
+## Why This Exists
 
-Этот проект - про обучение через практику:
-не просто "использовать готовый 3D-фреймворк", а понять как он устроен изнутри и собрать похожую архитектуру руками. 💙
+This project is about learning by building:
+not just using a ready-made 3D framework, but understanding how it works internally and recreating a similar architecture from scratch. 💙
